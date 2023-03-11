@@ -1,0 +1,124 @@
+
+:root {
+	--text-color: rgb(86, 114, 94);
+	--color-additional: goldenrod;
+	--transition: all 1s;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1rem;
+	background-color: #CFD;
+}
+
+.wrapper {
+	margin: auto;
+	padding: 0 1.3em;
+}
+
+/* header {
+	border-bottom: 0.1em solid var(--text-color);
+} */
+
+h1 {
+	font-size: 1.5em;
+	font-weight: 600;
+	color: var(--color-additional);
+	margin: 1.3em auto;
+}
+
+.accordion__item {
+	margin: auto;
+	border-top: 0.1em solid var(--text-color);
+}
+
+.accordion-toggle {
+	transform: scale(0);
+}
+
+label {
+	display: block;
+	margin: auto;
+	padding-bottom: 1em;
+}
+
+.h2 {
+	font-size: 1.2em;
+	margin: 1em 0;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lines-container {
+	width: 1.1em;
+	height: 1.1em;
+	justify-content: space-between;
+}
+
+.line-1, .line-2 {
+	display: inline-block;
+	background-color: var(--text-color);
+	height: 0.2em;
+	width: 100%;
+	transition: var(--transition);
+}
+
+.line-1 {
+	transform: translateY(1em) rotate(90deg);
+}
+
+.meme {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+}
+
+/* .accordion-toggle:checked + label {
+	border: 0.1em solid var(--color-additional);
+} */
+
+.accordion-toggle:checked + label .h2 {
+	color: var(--color-additional);
+}
+
+.accordion-toggle:checked + label .line-1 {
+	transform: translateY(1em) rotate(45deg);
+	background-color: var(--color-additional);
+}
+
+.accordion-toggle:checked + label .line-2 {
+	transform: rotate(-45deg);
+	background-color: var(--color-additional);
+}
+
+.accordion-toggle:checked + label object {
+	transform: rotate(45deg);
+}
+
+.accordion-toggle:checked + label .meme {
+	max-height: 100em;
+	transition: max-height 1s ease-in-out;
+	background-color: #9EB0A2;
+}
+
+.footer-info {
+	text-align: center;
+	border-top: 0.1em solid var(--text-color);
+	padding: 1em 0;
+}
+
+a {
+	color: var(--color-additional);
+}
+
