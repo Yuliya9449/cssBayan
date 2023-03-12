@@ -9,30 +9,30 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
-	font-size: 1rem;
+	font-size: 1.6rem;
 	background-color: #CFD;
 }
 
 .wrapper {
 	margin: auto;
-	padding: 0 1.3em;
+	padding: 0 10%;
 }
 
-/* header {
-	border-bottom: 0.1em solid var(--text-color);
-} */
-
 h1 {
-	font-size: 1.5em;
+	font-size: 3rem;
 	font-weight: 600;
 	color: var(--color-additional);
-	margin: 1.3em auto;
+	margin: 2.5rem auto;
 }
 
 .accordion__item {
 	margin: auto;
-	border-top: 0.1em solid var(--text-color);
+	border-top: 0.1rem solid var(--text-color);
 }
 
 .accordion-toggle {
@@ -42,12 +42,12 @@ h1 {
 label {
 	display: block;
 	margin: auto;
-	padding-bottom: 1em;
+	padding-bottom: 2rem;
 }
 
 .h2 {
-	font-size: 1.2em;
-	margin: 1em 0;
+	font-size: 2rem;
+	margin: 1.5rem 0;
 	font-weight: 600;
 	color: var(--text-color);
 }
@@ -57,7 +57,7 @@ label {
 	justify-content: space-between;
 }
 
-.lines-container {
+.icon {
 	width: 1.1em;
 	height: 1.1em;
 	justify-content: space-between;
@@ -84,10 +84,6 @@ label {
 	transition: max-height 1s cubic-bezier(0, 1, 0, 1);
 }
 
-/* .accordion-toggle:checked + label {
-	border: 0.1em solid var(--color-additional);
-} */
-
 .accordion-toggle:checked + label .h2 {
 	color: var(--color-additional);
 }
@@ -107,15 +103,15 @@ label {
 }
 
 .accordion-toggle:checked + label .meme {
-	max-height: 100em;
+	max-height: 100vh;
 	transition: max-height 1s ease-in-out;
 	background-color: #9EB0A2;
 }
 
 .footer-info {
 	text-align: center;
-	border-top: 0.1em solid var(--text-color);
-	padding: 1em 0;
+	border-top: 0.1rem solid var(--text-color);
+	padding: 2rem 0;
 }
 
 a {
