@@ -117,4 +117,57 @@ label {
 a {
 	color: var(--color-additional);
 }
+	
+	/* for hover */
+	
+@media (hover: hover) {
+	
+	.accordion:hover * {
+	cursor: pointer;
+	}
+	
+	.accordion:hover .h2 {
+	color: var(--color-additional);
+	transition: all 1s;
+	}
+	
+	.accordion:hover .icon * {
+	background-color: var(--color-additional);
+	}
+	
+	.h2 {
+	transition: all 1s;
+	}
+	
+	.icon {
+	width: 0;
+	height: 0;
+	transition: all 1s;
+	}
+	
+	.accordion:hover .icon {
+	width: 1.1em;
+	height: 1.1em;
+	transition: all 1s;
+	}
+	
+	.accordion__item:hover .meme {
+	max-height: 100em;
+	transition: max-height 1s ease-in-out;
+	background-color: #9EB0A2;
+	}
+	
+	.accordion__item:active * {
+	opacity: 0.9;
+	}
+	
+	.accordion__item:active .h2 {
+	color: var(--text-color);
+	transition: all 0s;
+	}
+	
+	.accordion__item:active .icon * {
+	background-color: var(--text-color);
+	}
+}
 
