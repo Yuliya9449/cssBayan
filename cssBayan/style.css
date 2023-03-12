@@ -11,12 +11,9 @@
 
 html {
 	font-size: calc(1em + 1vw);
-	/* font-size: 62.5%; */
 }
 
 body {
-	/* font-size: 1rem; */
-	/* font-size: 1.6rem; */
 	background-color: #CFD;
 }
 
@@ -38,7 +35,6 @@ h1 {
 }
 
 .accordion-toggle {
-	/* transform: scale(0); */
 	display: none;
 }
 
@@ -174,3 +170,23 @@ a {
 	}
 }
 
+/* for mobile */
+@media (min-width: 320px) {
+	body {
+		font-size: 0.8rem;
+	}
+}
+
+/* tablet */
+@media (min-width: 768px) {
+	body {
+		font-size: 0.85rem;
+	}
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+	body {
+		font-size: 0.9rem;
+	}
+}
