@@ -186,7 +186,15 @@ a {
 
 /* desktop */
 @media (min-width: 1024px) {
+	html {
+		font-size: calc((1em + 1vw) * 0.7);
+	}
+
 	body {
 		font-size: 0.9rem;
+	}
+
+	.wrapper {
+		padding: 0 20%;
 	}
 }
