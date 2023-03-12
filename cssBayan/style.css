@@ -1,0 +1,200 @@
+
+:root {
+	--text-color: rgb(86, 114, 94);
+	--color-additional: goldenrod;
+	--transition: all 1s;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: calc(1em + 1vw);
+}
+
+body {
+	background-color: #CFD;
+}
+
+.wrapper {
+	margin: auto;
+	padding: 0 10%;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--color-additional);
+	margin: 1.5rem auto;
+}
+
+.accordion__item {
+	margin: auto;
+	border-top: 0.1rem solid var(--text-color);
+}
+
+.accordion-toggle {
+	transform: scale(0);
+}
+
+label {
+	display: block;
+	margin: auto;
+	padding: 0.5rem 0;
+}
+
+.h2 {
+	font-size: 1rem;
+	margin: 1rem 0;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icon {
+	width: 1.1em;
+	height: 1.1em;
+	justify-content: space-between;
+}
+
+.line-1, .line-2 {
+	display: inline-block;
+	background-color: var(--text-color);
+	height: 0.2em;
+	width: 100%;
+	transition: var(--transition);
+}
+
+.line-1 {
+	transform: translateY(1em) rotate(90deg);
+}
+
+.meme {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-toggle:checked + label .h2 {
+	color: var(--color-additional);
+}
+
+.accordion-toggle:checked + label .line-1 {
+	transform: translateY(1em) rotate(45deg);
+	background-color: var(--color-additional);
+}
+
+.accordion-toggle:checked + label .line-2 {
+	transform: rotate(-45deg);
+	background-color: var(--color-additional);
+}
+
+.accordion-toggle:checked + label object {
+	transform: rotate(45deg);
+}
+
+.accordion-toggle:checked + label .meme {
+	max-height: 100vh;
+	transition: max-height 1s ease-in-out;
+	background-color: #9EB0A2;
+}
+
+.footer-info {
+	text-align: center;
+	border-top: 0.1rem solid var(--text-color);
+	padding: 1rem 0;
+}
+
+a {
+	color: var(--color-additional);
+}
+	
+	/* for hover */
+	
+@media (hover: hover) {
+	
+	.accordion:hover * {
+	cursor: pointer;
+	}
+	
+	.accordion:hover .h2 {
+	color: var(--color-additional);
+	transition: all 1s;
+	}
+	
+	.accordion:hover .icon * {
+	background-color: var(--color-additional);
+	}
+	
+	.h2 {
+	transition: all 1s;
+	}
+	
+	.icon {
+	width: 0;
+	height: 0;
+	transition: all 1s;
+	}
+	
+	.accordion:hover .icon {
+	width: 1.1em;
+	height: 1.1em;
+	transition: all 1s;
+	}
+	
+	.accordion__item:hover .meme {
+	max-height: 100em;
+	transition: max-height 1s ease-in-out;
+	background-color: #9EB0A2;
+	}
+	
+	.accordion__item:active * {
+	opacity: 0.9;
+	}
+	
+	.accordion__item:active .h2 {
+	color: var(--text-color);
+	transition: all 0s;
+	}
+	
+	.accordion__item:active .icon * {
+	background-color: var(--text-color);
+	}
+}
+
+/* for mobile */
+@media (min-width: 320px) {
+	body {
+		font-size: 0.8rem;
+	}
+}
+
+/* tablet */
+@media (min-width: 768px) {
+	body {
+		font-size: 0.85rem;
+	}
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+	html {
+		font-size: calc((1em + 1vw) * 0.7);
+	}
+
+	body {
+		font-size: 0.9rem;
+	}
+
+	.wrapper {
+		padding: 0 20%;
+	}
+}
